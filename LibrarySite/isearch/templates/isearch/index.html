@@ -1,0 +1,55 @@
+{% extends 'isearch/layout.html' %}
+
+{% block css %}
+<style>
+    h1 {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 30px;
+        margin-left: 10px; 
+    }
+
+    #hed {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    #hdp {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    a {
+        color: #34495e; 
+        text-decoration: none; 
+    }
+
+    #search-button {
+        text-align: center;
+        font-size: 30;
+        color: blue;
+    }
+</style>
+{% endblock %}
+
+{% block titl %}
+	Library home
+{% endblock %}
+
+{% block cont %}
+<div id="hed">
+    <h2>Welcome to the online library</h2>
+    <!--<img src="{ static 'users/img/logo.png' }" height="500" alt="logo">-->
+</div>
+<p id="hdp">
+  	Here you can find lots of free books to read.
+</p>
+<div id="search-button">
+  	<a href="../search">
+  	  	Click here to search for books
+  	</a>
+</div>
+{% endblock %}
