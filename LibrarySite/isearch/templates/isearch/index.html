@@ -1,4 +1,5 @@
 {% extends 'isearch/layout.html' %}
+{% load static %}
 
 {% block css %}
 <style>
@@ -42,10 +43,10 @@
 {% block cont %}
 <div id="hed">
     <h2>Welcome to the online library</h2>
-    <!--<img src="{ static 'users/img/logo.png' }" height="500" alt="logo">-->
+    <img src="{% static 'isearch/img/logo.png' %}" height="500" alt="logo">
 </div>
 <p id="hdp">
-  	Here you can find lots of free books to read.
+  	Here you can find lots of books to read.
 </p>
 <div id="search-button">
   	<a href="../search">
