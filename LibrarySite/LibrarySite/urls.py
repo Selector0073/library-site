@@ -17,13 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from isearch import views
+from login import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('profile/', include('users.urls')),
-    path('', views.index),
-    path('index/', views.index),
-    path('search/', include('isearch.urls'))
+    path('', include('isearch.urls')),
+    path('index/', include('isearch.urls')),
+    path('search/', include('isearch.urls')),
+    path('login/', include('login.urls')),
+    path('reg/', views.reg),
+    path('show/', views.show)
 ]

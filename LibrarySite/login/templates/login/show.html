@@ -1,0 +1,50 @@
+{% extends 'isearch/layout.html' %}
+
+{% block css %}
+<style>
+	#hh {
+		text-align: center;
+	}
+
+    a {
+        color: #34495e; 
+        text-decoration: none; 
+    }
+	
+	#data {
+		font-size: 40px;
+		font-style: italic;
+	}
+
+	p {
+		font-size: 40px;
+	}
+
+	#fr {
+		margin-left: 25%;
+		margin-right: 25%;
+		margin-top: 40px;
+	}
+
+</style>
+{% endblock %}
+
+{% block titl %}
+	Library profile
+{% endblock %}
+
+{% block cont %}
+	<h1 id="hh">Your profile</h1>
+
+	<p>Username:</p>
+	<div id="data">{{ usernm }}</div>
+	<p>Email:</p>
+	<div id="data">{{ ema }}</div>
+
+	<form method="post">
+	    {% csrf_token %}
+	    <button type="submit" name="status" value="confirmed" class="btn btn-success" id="fr">
+	        Log out
+	    </button>
+	</form>
+{% endblock %}

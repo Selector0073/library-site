@@ -1,0 +1,42 @@
+{% extends 'isearch/layout.html' %}
+
+{% block css %}
+<style>
+	#form {
+		margin-left: 25%;
+		margin-right: 25%;
+		margin-top: 40px;
+	}
+
+	#hh {
+		text-align: center;
+	}
+
+    a {
+        color: #34495e; 
+        text-decoration: none; 
+    }
+
+</style>
+{% endblock %}
+
+{% block titl %}
+	Library profile
+{% endblock %}
+
+{% block cont %}
+	<h1 id="hh">Registration</h1>
+	<form method="POST" id="form">
+		{% csrf_token %}
+		{{ form.username }}<br>
+		{{ form.email }}<br>
+		{{ form.passw }}<br>
+		<button class="btn btn-success" type="submit">Submit</button>
+		<br>
+		<span>{{ error1 }}</span>
+		<span>{{ error2 }}</span>
+		<span>{{ error3 }}</span>
+		<span>{{ error4 }}</span><br>
+        <a href="../login">Login</a>
+	</form>
+{% endblock %}

@@ -18,6 +18,8 @@ ul {
 .logo {
   margin: 0; 
   font-size: 1.45em;
+  color: #34495e; 
+  text-decoration: none; 
 }
 
 .main-nav {
@@ -76,8 +78,4 @@ ul {
     justify-content: space-between; 
   }
 
-}
-a {
-  color: #34495e; 
-  text-decoration: none; 
 }
